@@ -53,13 +53,12 @@ public class ListaEncadeada implements ListaEncadeada_IF {
 
     @Override
     public void insert(Integer element) {
-        if(isEmpty()){
-            value = element;
-            next = new ListaEncadeada();
-        }
-        else{
-            next.insert(element);
-        }
+        ListaEncadeada aux = new ListaEncadeada();
+        aux.value = value;
+        aux.next = next;
+
+        next = aux;
+        value = element;
     }
 
     @Override

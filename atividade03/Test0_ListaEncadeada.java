@@ -69,10 +69,9 @@ public class Test0_ListaEncadeada {
 
 	@Test
 	public void testToArray() throws Exception{
-		int[] array = new int[5];
+		int[] array = {5,4,3,2,1};
 		for(int i=1; i <= 5; i++){
 			l.insert(i);
-			array[i-1] = i;
 		}
 		assertArrayEquals(array, l.toArray());
 	}
